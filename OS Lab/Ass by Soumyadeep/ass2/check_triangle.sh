@@ -14,7 +14,8 @@ x1=`echo "$x>0"|bc`
 if [ $x1 -gt 0 ]
 then
 	echo "Triangle formation is possible"
-	ar=`echo "scale=0; sqrt($x)"|bc`
+	#scale 3 for real inputs
+	ar=`echo "scale=3; sqrt($x)"|bc`
 	echo "Area is $ar"
 else
 	echo "Triangle formation is not possible"
